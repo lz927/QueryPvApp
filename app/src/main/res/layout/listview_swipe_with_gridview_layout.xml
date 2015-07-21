@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swiplayout_with_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <!-- Bottom View Start-->
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#66ddff00"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <!--What you want to show-->
+        <TextView
+            android:id="@+id/delete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff3333"
+            android:gravity="center"
+            android:text="加入黑名单"
+            android:textColor="#fff" />
+    </LinearLayout>
+    <!-- Bottom View End-->
+
+    <!-- Surface View Start -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:paddingLeft="11dp"
+        android:orientation="vertical">
+        <!--What you want to show in SurfaceView-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingRight="10dp"
+                    android:text="1211"
+                    android:singleLine="true"
+                    android:textColor="#330000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/query_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="百度"
+                    android:singleLine="true"
+                    android:textColor="#330000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pv_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="百度"
+                    android:textColor="#330000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/uv_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="百度"
+                    android:textColor="#330000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.example.lizheng.querypvapp.CustomerView.GridViewForListView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="right"
+                android:horizontalSpacing="8dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="8" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Surface View End -->
+</com.daimajia.swipe.SwipeLayout>
